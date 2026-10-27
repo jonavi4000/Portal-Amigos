@@ -1,0 +1,542 @@
+{
+ "comunas": [
+  "Occidental",
+  "Norte",
+  "Oriental",
+  "Sur"
+ ],
+ "barrios": [
+  {
+   "nombre": "Centro",
+   "lat": 1.6154,
+   "lng": -75.6041,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Siete de Agosto",
+   "lat": 1.6163,
+   "lng": -75.6113,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "La Inmaculada",
+   "lat": 1.6185,
+   "lng": -75.613,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "San Francisco",
+   "lat": 1.6171,
+   "lng": -75.6102,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Juan XXIII",
+   "lat": 1.6148,
+   "lng": -75.6085,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Alfonso López",
+   "lat": 1.6135,
+   "lng": -75.6062,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Avenida Gaitán",
+   "lat": 1.6128,
+   "lng": -75.608,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "La Vega",
+   "lat": 1.6142,
+   "lng": -75.6125,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "José Antonio Galán",
+   "lat": 1.618,
+   "lng": -75.6088,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "El Guamal",
+   "lat": 1.6115,
+   "lng": -75.61,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "San Fernando",
+   "lat": 1.616,
+   "lng": -75.6152,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "La Gloria",
+   "lat": 1.6215,
+   "lng": -75.617,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Vista Hermosa",
+   "lat": 1.6198,
+   "lng": -75.6155,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "La Bocana",
+   "lat": 1.611,
+   "lng": -75.609,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Circasias",
+   "lat": 1.612,
+   "lng": -75.607,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Las Torres",
+   "lat": 1.6168,
+   "lng": -75.6098,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Lenin",
+   "lat": 1.6178,
+   "lng": -75.612,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "El Portal",
+   "lat": 1.6208,
+   "lng": -75.6162,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Villa del Rey",
+   "lat": 1.6192,
+   "lng": -75.618,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Palo Quemao",
+   "lat": 1.6145,
+   "lng": -75.611,
+   "comuna": "Occidental"
+  },
+  {
+   "nombre": "Torasso",
+   "lat": 1.6239,
+   "lng": -75.6129,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Los Alpes",
+   "lat": 1.6265,
+   "lng": -75.611,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "El Porvenir",
+   "lat": 1.621,
+   "lng": -75.615,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "La Floresta",
+   "lat": 1.6202,
+   "lng": -75.6091,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Las Cabañas",
+   "lat": 1.625,
+   "lng": -75.614,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "El Progreso",
+   "lat": 1.628,
+   "lng": -75.6095,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Villa Carola",
+   "lat": 1.6272,
+   "lng": -75.607,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Los Molinos",
+   "lat": 1.6235,
+   "lng": -75.6082,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "El Triunfo",
+   "lat": 1.6248,
+   "lng": -75.6165,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "La Consolata",
+   "lat": 1.622,
+   "lng": -75.6115,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Villa Mónica",
+   "lat": 1.629,
+   "lng": -75.613,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Pueblo Nuevo",
+   "lat": 1.6208,
+   "lng": -75.6105,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "La Palmera",
+   "lat": 1.6242,
+   "lng": -75.61,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Portal del Norte",
+   "lat": 1.631,
+   "lng": -75.612,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "El Bosque",
+   "lat": 1.626,
+   "lng": -75.6158,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Bruselas",
+   "lat": 1.6245,
+   "lng": -75.6122,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Quintana",
+   "lat": 1.6258,
+   "lng": -75.6085,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Villa Mady",
+   "lat": 1.6285,
+   "lng": -75.6108,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "La Esmeralda",
+   "lat": 1.623,
+   "lng": -75.6148,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Los Pinos",
+   "lat": 1.627,
+   "lng": -75.6145,
+   "comuna": "Norte"
+  },
+  {
+   "nombre": "Nueva Colombia",
+   "lat": 1.619,
+   "lng": -75.598,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Santander",
+   "lat": 1.6175,
+   "lng": -75.6012,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Abbas Turbay",
+   "lat": 1.614,
+   "lng": -75.5955,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Simón Bolívar Alto",
+   "lat": 1.6182,
+   "lng": -75.594,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Rodrigo Turbay I",
+   "lat": 1.621,
+   "lng": -75.5925,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Rodrigo Turbay II",
+   "lat": 1.6225,
+   "lng": -75.591,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Álamos Oriental",
+   "lat": 1.616,
+   "lng": -75.596,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Altamira",
+   "lat": 1.6195,
+   "lng": -75.5932,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Constructores",
+   "lat": 1.623,
+   "lng": -75.595,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Rincón de la Estrella",
+   "lat": 1.6205,
+   "lng": -75.5905,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "San Judas",
+   "lat": 1.6152,
+   "lng": -75.5988,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Rincón de Ipanema",
+   "lat": 1.624,
+   "lng": -75.589,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "La Cooperativa",
+   "lat": 1.6168,
+   "lng": -75.5995,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Bello Horizonte",
+   "lat": 1.6218,
+   "lng": -75.5885,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "El Triunfo Oriental",
+   "lat": 1.6235,
+   "lng": -75.5938,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Villa Prado",
+   "lat": 1.6188,
+   "lng": -75.5968,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "La Palmera Oriental",
+   "lat": 1.62,
+   "lng": -75.592,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Los Sauces",
+   "lat": 1.6165,
+   "lng": -75.5948,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Bello Horizonte Alto",
+   "lat": 1.6225,
+   "lng": -75.5875,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Villa Marcela",
+   "lat": 1.6198,
+   "lng": -75.5912,
+   "comuna": "Oriental"
+  },
+  {
+   "nombre": "Tovar Zambrano",
+   "lat": 1.6086,
+   "lng": -75.5982,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Idema",
+   "lat": 1.6101,
+   "lng": -75.6053,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Ciudadela Siglo XXI - 1.ª Etapa",
+   "lat": 1.6015,
+   "lng": -75.612,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Ciudadela Siglo XXI - 2.ª Etapa",
+   "lat": 1.5998,
+   "lng": -75.6142,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "La Libertad",
+   "lat": 1.606,
+   "lng": -75.608,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "El Raicero",
+   "lat": 1.6112,
+   "lng": -75.6025,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Buenos Aires",
+   "lat": 1.6045,
+   "lng": -75.601,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Jesús Ángel González",
+   "lat": 1.6075,
+   "lng": -75.604,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "La Amistad",
+   "lat": 1.603,
+   "lng": -75.6065,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "El Mirador",
+   "lat": 1.609,
+   "lng": -75.5945,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Los Andes",
+   "lat": 1.6052,
+   "lng": -75.597,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "La Primavera",
+   "lat": 1.602,
+   "lng": -75.6095,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Nueva Florencia",
+   "lat": 1.5985,
+   "lng": -75.6105,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "El Edén",
+   "lat": 1.6005,
+   "lng": -75.605,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Las Villas",
+   "lat": 1.604,
+   "lng": -75.6025,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Regina",
+   "lat": 1.6042,
+   "lng": -75.6055,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "El Porvenir Sur",
+   "lat": 1.6025,
+   "lng": -75.6088,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "La Esperanza Sur",
+   "lat": 1.6008,
+   "lng": -75.607,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Villa Real",
+   "lat": 1.5975,
+   "lng": -75.6118,
+   "comuna": "Sur"
+  },
+  {
+   "nombre": "Los Comuneros",
+   "lat": 1.608,
+   "lng": -75.6015,
+   "comuna": "Sur"
+  }
+ ],
+ "rurales": [
+  {
+   "nombre": "El Caraño",
+   "lat": 1.6883,
+   "lng": -75.6321
+  },
+  {
+   "nombre": "Santo Domingo / COFEMA",
+   "lat": 1.605,
+   "lng": -75.642
+  },
+  {
+   "nombre": "Venecia",
+   "lat": 1.558,
+   "lng": -75.582
+  },
+  {
+   "nombre": "Puerto Arango",
+   "lat": 1.543,
+   "lng": -75.539
+  },
+  {
+   "nombre": "Capitolio",
+   "lat": 1.572,
+   "lng": -75.568
+  },
+  {
+   "nombre": "El Danubio",
+   "lat": 1.765,
+   "lng": -75.552
+  },
+  {
+   "nombre": "Orteguaza / Santana Las Hermosas",
+   "lat": 1.642,
+   "lng": -75.535
+  },
+  {
+   "nombre": "San Pedro / El Pará",
+   "lat": 1.681,
+   "lng": -75.485
+  },
+  {
+   "nombre": "San Martín / San Juan del Barro",
+   "lat": 1.585,
+   "lng": -75.551
+  },
+  {
+   "nombre": "Sebastopol",
+   "lat": 1.671,
+   "lng": -75.621
+  }
+ ]
+}

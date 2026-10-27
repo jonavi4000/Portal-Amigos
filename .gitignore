@@ -1,0 +1,6 @@
+node_modules/
+.env
+campana.db
+campana.db-journal
+campana.db-shm
+campana.db-wal

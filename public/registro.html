@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Registro — Portal Amigos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <a href="/index.html" class="marca" style="text-decoration:none;">
+    <span class="logo-mark"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+    <span class="nombre">Portal Amigos</span>
+  </a>
+
+  <div class="split-registro">
+    <div class="panel-formulario">
+      <h1>¡Bienvenido/a, amigo/a!</h1>
+      <p class="subtitulo" id="textoReferido">Solo te tomará un minuto. Cuéntanos un poco de ti.</p>
+
+      <form id="formRegistro">
+        <div class="seccion-numero"><span class="num">1</span> Datos personales</div>
+
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" required
+          pattern="[A-Za-zÀ-ÖØ-öø-ÿ'.-]+(\s+[A-Za-zÀ-ÖØ-öø-ÿ'.-]+)+"
+          title="Escribe nombre y apellido (solo letras)" />
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" required
+          inputmode="numeric" maxlength="10"
+          pattern="[0-9]{7,10}"
+          title="Solo números, entre 7 y 10 dígitos" />
+
+        <label for="cedula">Cédula</label>
+        <input type="text" id="cedula" required
+          inputmode="numeric" maxlength="12"
+          pattern="[0-9]{5,12}"
+          title="Solo números, entre 5 y 12 dígitos" />
+        <p class="error oculto" id="avisoCedula"></p>
+
+        <label for="rango_edad">Rango de edad</label>
+        <select id="rango_edad" required>
+          <option value="" disabled selected>Selecciona...</option>
+          <option value="18-26">18 a 26 años</option>
+          <option value="27-35">27 a 35 años</option>
+          <option value="36-45">36 a 45 años</option>
+          <option value="46-55">46 a 55 años</option>
+          <option value="56-65">56 a 65 años</option>
+          <option value="66 o más">66 años o más</option>
+        </select>
+
+        <div class="seccion-numero"><span class="num">2</span> Ubicación</div>
+
+        <label>Zona</label>
+        <div class="fila-radio">
+          <label><input type="radio" name="tipo_zona" value="urbana" checked /> Urbana</label>
+          <label><input type="radio" name="tipo_zona" value="rural" /> Rural</label>
+        </div>
+
+        <div id="bloqueUrbana">
+          <label for="barrio">Barrio</label>
+          <select id="barrio"><option value="">Cargando…</option></select>
+          <div id="bloqueComuna" class="oculto">
+            <label for="comuna">¿En qué comuna queda?</label>
+          <select id="comuna">
+            <option value="Norte">Norte</option>
+            <option value="Sur">Sur</option>
+            <option value="Oriental">Oriental</option>
+            <option value="Occidental">Occidental</option>
+          </select>
+          </div>
+        </div>
+
+        <div id="bloqueRural" class="oculto">
+          <label for="vereda">Corregimiento o sector rural</label>
+          <select id="vereda"><option value="">Cargando…</option></select>
+        </div>
+
+        <div class="seccion-numero"><span class="num">3</span> ¿Quién te invitó?</div>
+        <p class="subtitulo" id="cajaReferido" style="margin-bottom:6px;">
+          Te registraste directamente, sin invitación de nadie.
+        </p>
+
+        <div class="seccion-numero"><span class="num">4</span> Consentimiento</div>
+        <div class="caja-consentimiento">
+          <label>
+            <input type="checkbox" id="consentimiento" required />
+            <span>
+              Autorizo el tratamiento de mis datos personales conforme a la
+              <strong>Ley 1581 de 2012</strong> y acepto los
+              <a href="/terminos.html" target="_blank">términos y condiciones</a>
+              y la <a href="/privacidad.html" target="_blank">política de privacidad</a>.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="ancho-total">¡Listo, quiero unirme!</button>
+        <p class="error oculto" id="mensajeError"></p>
+      </form>
+
+      <div class="tarjeta-exito oculto" id="tarjetaExito">
+        <p><svg class="ic ic-ok" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Gracias, <span class="nombre-persona" id="nombrePersona"></span>.<br>Ya formas parte del equipo que cree en el desarrollo y futuro de nuestra región.</p>
+        <div class="botones-whatsapp" id="botonesWhatsapp"></div>
+      </div>
+    </div>
+
+    <div class="panel-hero">
+      <div>
+        <h2>Portal Amigos</h2>
+        <p>Conectando personas, fortaleciendo nuestra comunidad.</p>
+      </div>
+      <ul>
+        <li><span class="marca-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> Haz parte de nuestra red — tu referencia también construye futuro.</li>
+        <li><span class="marca-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span> Tus datos están protegidos conforme a la Ley 1581 de 2012.</li>
+        <li><span class="marca-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span> Juntos generamos más oportunidades para todos.</li>
+      </ul>
+      <p class="firma">Portal Amigos — Juntos llegamos más lejos.</p>
+    </div>
+  </div>
+
+<script src="/js/ubicacion.js"></script>
+<script src="/js/registro.js"></script>
+</body>
+</html>
