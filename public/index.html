@@ -7,12 +7,41 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link rel="stylesheet" href="/css/style.css" />
+<style>
+  .redes-titulo { text-align: center; margin: 22px 0 0; font-weight: 600; color: #0a6b35; }
+  .redes { display: flex; justify-content: center; gap: 14px; margin: 12px 0 22px; }
+  .redes a {
+    width: 46px; height: 46px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #0a6b35; color: #fff; font-size: 20px; text-decoration: none;
+    transition: transform .2s, background .2s;
+  }
+  .redes a:hover { transform: scale(1.1); background: #d90429; }
+
+  /* Ajuste de proporciones: banner y contenido en una sola columna, sin bordes ni tarjeta */
+  body.portada { padding: 0 !important; margin: 0 !important; }
+  .banner-portada {
+    display: block !important; width: 100% !important; max-width: 720px !important;
+    height: auto !important; margin: 0 auto !important;
+    border-radius: 0 !important; border: 0 !important; box-shadow: none !important;
+  }
+  .contenedor {
+    width: 100% !important; max-width: 720px !important; margin: 0 auto !important;
+    padding: 28px 22px 40px !important; box-sizing: border-box !important;
+    background: transparent !important; border: 0 !important; border-radius: 0 !important;
+    box-shadow: none !important; transform: none !important; top: auto !important;
+  }
+  .botones-portada a, .botones-portada button { width: 100%; }
+  @media (max-width: 600px) {
+    .contenedor { padding: 22px 16px 32px !important; }
+  }
+</style>
 </head>
 <body class="portada">
 
-    <img src="/img/banner.jpg" alt="Jovanny Florencia" class="banner-portada" />
-
+  <img src="/img/portada.jpg" alt="Únete al Portal de Amigos - Jovanny Vásquez" class="banner-portada" />
 
   <div class="contenedor">
     <div class="hero-bienvenida">
@@ -24,6 +53,14 @@
     <div class="botones-portada">
       <a href="/registro.html"><button>Quiero registrarme <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button></a>
     </div>
+
+    <p class="redes-titulo">Síguenos en nuestras redes</p>
+    <div class="redes">
+      <a href="https://web.facebook.com/jovannyvasquezgutierrez/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/jovannyvasquezgutierrez/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@yosoyjovannyvasquez" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+
     <p class="pie-amable"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Tus datos están protegidos y solo se usan para organizar nuestra comunidad.</p>
   </div>
 
