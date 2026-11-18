@@ -54,19 +54,8 @@
    "lng": -75.598285,
    "comuna": "Occidental"
   },
-  {
-   "nombre": "José Antonio Galán",
-   "lat": 1.618,
-   "lng": -75.6088,
-   "comuna": "Occidental"
-  },
-  {
-   "nombre": "El Guamal",
-   "lat": 1.6115,
-   "lng": -75.61,
-   "comuna": "Occidental"
-  },
-  {
+
+   {
    "nombre": "San Fernando",
    "lat": 1.616,
    "lng": -75.6152,
@@ -74,28 +63,18 @@
   },
   {
    "nombre": "La Gloria",
-   "lat": 1.6215,
-   "lng": -75.617,
+   "lat": 1.6078821143053537, 
+   "lng": -75.63047344422722,
    "comuna": "Occidental"
   },
-  {
-   "nombre": "Vista Hermosa",
-   "lat": 1.6198,
-   "lng": -75.6155,
-   "comuna": "Occidental"
-  },
+ 
   {
    "nombre": "La Bocana",
    "lat": 1.610179,
    "lng": -75.614319,
    "comuna": "Occidental"
   },
-  {
-   "nombre": "Circasias",
-   "lat": 1.612,
-   "lng": -75.607,
-   "comuna": "Occidental"
-  },
+ 
   {
    "nombre": "Las Torres",
    "lat": 1.611047,
@@ -122,8 +101,8 @@
   },
   {
    "nombre": "Palo Quemao",
-   "lat": 1.6145,
-   "lng": -75.611,
+   "lat": 1.628395222552333,  
+   "lng": -75.61432840804493,
    "comuna": "Occidental"
   },
   {
@@ -140,8 +119,8 @@
   },
   {
    "nombre": "Circasia",
-   "lat": 1.608713,
-   "lng": -75.616417,
+   "lat":  1.6091834096786326,
+   "lng": -75.61619583274037,
    "comuna": "Occidental"
   },
   {
@@ -170,8 +149,8 @@
   },
   {
    "nombre": "Galan",
-   "lat": 1.610039,
-   "lng": -75.61626,
+   "lat": 1.6105289116704835, 
+   "lng": -75.61590412142417, 
    "comuna": "Occidental"
   },
   {
@@ -180,12 +159,7 @@
    "lng": -75.598661,
    "comuna": "Occidental"
   },
-  {
-   "nombre": "Idema",
-   "lat": 1.605365,
-   "lng": -75.607807,
-   "comuna": "Occidental"
-  },
+  
   {
    "nombre": "Juan XXIII Bajo",
    "lat": 1.610773,
@@ -223,10 +197,10 @@
    "comuna": "Occidental"
   },
   {
-   "nombre": "Los Comuneros",
-   "lat": 1.617802,
-   "lng": -75.600001,
-   "comuna": "Occidental"
+   "nombre": "Los Comuneros", 
+   "lat": 1.6177855045308647,
+   "lng": -75.59996697615578,
+   "comuna": "Oriental"
   },
   {
    "nombre": "Puente Lopez",
@@ -264,18 +238,7 @@
    "lng": -75.605147,
    "comuna": "Norte"
   },
-  {
-   "nombre": "El Porvenir",
-   "lat": 1.621,
-   "lng": -75.615,
-   "comuna": "Norte"
-  },
-  {
-   "nombre": "La Floresta",
-   "lat": 1.6202,
-   "lng": -75.6091,
-   "comuna": "Norte"
-  },
+    
   {
    "nombre": "Las Cabañas",
    "lat": 1.625,
@@ -288,22 +251,11 @@
    "lng": -75.6095,
    "comuna": "Norte"
   },
-  {
-   "nombre": "Villa Carola",
-   "lat": 1.6272,
-   "lng": -75.607,
-   "comuna": "Norte"
-  },
+  
   {
    "nombre": "Los Molinos",
    "lat": 1.6235,
    "lng": -75.6082,
-   "comuna": "Norte"
-  },
-  {
-   "nombre": "El Triunfo",
-   "lat": 1.6248,
-   "lng": -75.6165,
    "comuna": "Norte"
   },
   {
@@ -312,12 +264,7 @@
    "lng": -75.613773,
    "comuna": "Norte"
   },
-  {
-   "nombre": "Villa Mónica",
-   "lat": 1.629,
-   "lng": -75.613,
-   "comuna": "Norte"
-  },
+ 
   {
    "nombre": "Pueblo Nuevo",
    "lat": 1.6208,
@@ -336,18 +283,7 @@
    "lng": -75.612,
    "comuna": "Norte"
   },
-  {
-   "nombre": "El Bosque",
-   "lat": 1.626,
-   "lng": -75.6158,
-   "comuna": "Norte"
-  },
-  {
-   "nombre": "Bruselas",
-   "lat": 1.6245,
-   "lng": -75.6122,
-   "comuna": "Norte"
-  },
+  
   {
    "nombre": "Quintana",
    "lat": 1.6258,
@@ -360,22 +296,17 @@
    "lng": -75.6108,
    "comuna": "Norte"
   },
-  {
-   "nombre": "La Esmeralda",
-   "lat": 1.623,
-   "lng": -75.6148,
-   "comuna": "Norte"
-  },
+ 
   {
    "nombre": "Los Pinos",
-   "lat": 1.627,
-   "lng": -75.6145,
+   "lat": 1.6314339363721049, 
+   "lng": -75.60498618619108,
    "comuna": "Norte"
   },
   {
    "nombre": "Acolsure",
-   "lat": 1.629406,
-   "lng": -75.602843,
+   "lat": 1.6224994964774138, 
+   "lng": -75.62205299962775,
    "comuna": "Norte"
   },
   {
@@ -445,12 +376,6 @@
    "comuna": "Norte"
   },
   {
-   "nombre": "El Mirador",
-   "lat": 1.627487,
-   "lng": -75.598961,
-   "comuna": "Norte"
-  },
-  {
    "nombre": "El Sinai Etapa II",
    "lat": 1.632657,
    "lng": -75.616419,
@@ -494,8 +419,8 @@
   },
   {
    "nombre": "La Amazonia",
-   "lat": 1.630721,
-   "lng": -75.603443,
+   "lat": 1.6347543917241825,
+   "lng": -75.6050982411497,
    "comuna": "Norte"
   },
   {
@@ -656,8 +581,8 @@
   },
   {
    "nombre": "Altamira",
-   "lat": 1.624919,
-   "lng": -75.59933,
+   "lat": 1.6221963825349424,
+   "lng": -75.59862816048157,
    "comuna": "Oriental"
   },
   {
@@ -672,36 +597,21 @@
    "lng": -75.601471,
    "comuna": "Oriental"
   },
-  {
-   "nombre": "San Judas",
-   "lat": 1.6152,
-   "lng": -75.5988,
-   "comuna": "Oriental"
-  },
-  {
+  
+   {
    "nombre": "Rincón de Ipanema",
    "lat": 1.618408,
    "lng": -75.603031,
    "comuna": "Oriental"
   },
-  {
-   "nombre": "La Cooperativa",
-   "lat": 1.6168,
-   "lng": -75.5995,
-   "comuna": "Oriental"
-  },
+ 
   {
    "nombre": "Bello Horizonte",
    "lat": 1.615343,
    "lng": -75.61035,
    "comuna": "Oriental"
   },
-  {
-   "nombre": "El Triunfo Oriental",
-   "lat": 1.6235,
-   "lng": -75.5938,
-   "comuna": "Oriental"
-  },
+  
   {
    "nombre": "Villa Prado",
    "lat": 1.6188,
@@ -770,8 +680,8 @@
   },
   {
    "nombre": "Chapinero",
-   "lat": 1.629485,
-   "lng": -75.590915,
+   "lat": 1.6296896605137452,
+   "lng": -75.5912479364176,
    "comuna": "Oriental"
   },
   {
@@ -824,20 +734,20 @@
   },
   {
    "nombre": "Jesus Angel Gozales",
-   "lat": 1.614573,
-   "lng": -75.614335,
+   "lat": 1.6261213174009528, 
+   "lng": -75.59007138448374,
    "comuna": "Oriental"
   },
   {
    "nombre": "Jorge Eliecer Gaitan",
-   "lat": 1.609031,
-   "lng": -75.602747,
+   "lat":  1.608919662347485,
+   "lng":  -75.60258393391233,
    "comuna": "Oriental"
   },
   {
    "nombre": "Kamani",
-   "lat": 1.615965,
-   "lng": -75.614334,
+   "lat": 1.6235065031954292,  
+   "lng": -75.59392292096214,
    "comuna": "Oriental"
   },
   {
@@ -926,26 +836,27 @@
   },
   {
    "nombre": "Villa Salem",
-   "lat": 1.61966,
-   "lng": -75.597529,
+   "lat": 1.622310904958838,  
+   "lng": -75.5968511987454,
    "comuna": "Oriental"
   },
   {
    "nombre": "Vista hermosa",
-   "lat": 1.624295,
-   "lng": -75.598928,
+   "lat": 1.6255331785674223, 
+   "lng": -75.59921312316274,
    "comuna": "Oriental"
   },
+ 
   {
-   "nombre": "Tovar Zambrano",
-   "lat": 1.6086,
-   "lng": -75.5982,
+   "nombre": "Idema",
+   "lat": 1.605134773988163,
+   "lng": -75.60753111610823,
    "comuna": "Sur"
   },
   {
-   "nombre": "Idema",
-   "lat": 1.6101,
-   "lng": -75.6053,
+   "nombre": "Altavista",
+   "lat": 1.6077474917035075, 
+   "lng": -75.59590426273496,
    "comuna": "Sur"
   },
   {
@@ -960,30 +871,14 @@
    "lng": -75.6142,
    "comuna": "Sur"
   },
-  {
-   "nombre": "La Libertad",
-   "lat": 1.606,
-   "lng": -75.608,
-   "comuna": "Sur"
-  },
-  {
-   "nombre": "El Raicero",
-   "lat": 1.6112,
-   "lng": -75.6025,
-   "comuna": "Sur"
-  },
+  
   {
    "nombre": "Buenos Aires",
    "lat": 1.6045,
    "lng": -75.601,
    "comuna": "Sur"
   },
-  {
-   "nombre": "Jesús Ángel González",
-   "lat": 1.6075,
-   "lng": -75.604,
-   "comuna": "Sur"
-  },
+ 
   {
    "nombre": "La Amistad",
    "lat": 1.603,
@@ -1014,12 +909,7 @@
    "lng": -75.601341,
    "comuna": "Sur"
   },
-  {
-   "nombre": "El Edén",
-   "lat": 1.6005,
-   "lng": -75.605,
-   "comuna": "Sur"
-  },
+  
   {
    "nombre": "Las Villas",
    "lat": 1.604,
@@ -1050,12 +940,7 @@
    "lng": -75.6118,
    "comuna": "Sur"
   },
-  {
-   "nombre": "Los Comuneros",
-   "lat": 1.608,
-   "lng": -75.6015,
-   "comuna": "Sur"
-  },
+  
   {
    "nombre": "17 de Enero",
    "lat": 1.60268,
@@ -1088,8 +973,8 @@
   },
   {
    "nombre": "Bruselas",
-   "lat": 1.614119,
-   "lng": -75.605268,
+   "lat": 1.5971338600409468,
+   "lng": -75.58354320643349,
    "comuna": "Sur"
   },
   {
@@ -1112,8 +997,8 @@
   },
   {
    "nombre": "El Rosal",
-   "lat": 1.62113,
-   "lng": -75.617859,
+   "lat": 1.6061970738901155, 
+   "lng": -75.60097605523873,
    "comuna": "Sur"
   },
   {
@@ -1128,12 +1013,7 @@
    "lng": -75.629367,
    "comuna": "Sur"
   },
-  {
-   "nombre": "La Gloria",
-   "lat": 1.607427,
-   "lng": -75.630593,
-   "comuna": "Sur"
-  },
+ 
   {
    "nombre": "La Normal",
    "lat": 1.604723,
@@ -1148,8 +1028,8 @@
   },
   {
    "nombre": "Los Angeles",
-   "lat": 1.62375,
-   "lng": -75.606741,
+   "lat": 1.6042824492409322, 
+   "lng": -75.57738212089993,
    "comuna": "Sur"
   },
   {
@@ -1160,8 +1040,8 @@
   },
   {
    "nombre": "Nuevo Horizonte",
-   "lat": 1.602879,
-   "lng": -75.598234,
+   "lat": 1.6277231142067858, 
+   "lng": -75.59452543965882,
    "comuna": "Sur"
   },
   {
@@ -1196,8 +1076,8 @@
   },
   {
    "nombre": "Urb. El bosque",
-   "lat": 1.597894,
-   "lng": -75.599747,
+   "lat": 1.6035167847934453,
+   "lng": -75.59713189085713,
    "comuna": "Sur"
   },
   {
@@ -1208,8 +1088,8 @@
   },
   {
    "nombre": "Villa Carola",
-   "lat": 1.600536,
-   "lng": -75.596916,
+   "lat": 1.60050050823759,
+   "lng": -75.59679670048044,
    "comuna": "Sur"
   },
   {

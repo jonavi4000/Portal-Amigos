@@ -1,3 +1,8 @@
+// Escapa texto antes de meterlo en HTML (evita que un dato raro se ejecute como codigo)
+function esc(t) {
+  return String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
 const vistaLogin = document.getElementById("vistaLogin");
 const vistaPanel = document.getElementById("vistaPanel");
 
@@ -69,19 +74,19 @@ function renderArbol(nodos, contenedorUl, esRaiz) {
         ? `Comuna ${nodo.comuna} · Barrio ${nodo.barrio}`
         : nodo.vereda;
     const etiquetaCodigo = nodo.codigo
-      ? `<span class="nodo-codigo">${nodo.codigo}</span>`
+      ? `<span class="nodo-codigo">${esc(nodo.codigo)}</span>`
       : `<span class="nodo-codigo persona-tag">persona</span>`;
     li.innerHTML = `
       <div class="nodo-tarjeta">
-        <div class="avatar ${nodo.rol === "persona" ? "persona" : ""}">${iniciales(nodo.nombre)}</div>
+        <div class="avatar ${nodo.rol === "persona" ? "persona" : ""}">${esc(iniciales(nodo.nombre))}</div>
         <div class="nodo-info">
           <div class="nodo-cabecera">
-            <span class="nodo-nombre">${nodo.nombre}${esRaiz ? " (tú)" : ""}</span>
+            <span class="nodo-nombre">${esc(nodo.nombre)}${esRaiz ? " (tú)" : ""}</span>
             ${etiquetaCodigo}
           </div>
           <div class="nodo-detalle">
-            Tel. ${nodo.telefono} · C.C. ${nodo.cedula} · ${nodo.rango_edad} ·
-            <span class="badge-zona">${zona}</span>
+            Tel. ${esc(nodo.telefono)} · C.C. ${esc(nodo.cedula)} · ${esc(nodo.rango_edad)} ·
+            <span class="badge-zona">${esc(zona)}</span>
           </div>
         </div>
       </div>

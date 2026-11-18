@@ -49,6 +49,23 @@ db.exec(`
 const colsBono = db.prepare("PRAGMA table_info(bonificaciones)").all().map((c) => c.name);
 if (!colsBono.includes("monto")) db.exec("ALTER TABLE bonificaciones ADD COLUMN monto INTEGER");
 
+// Consentimiento de tratamiento de datos (Ley 1581 de 2012): cuando y con que version del texto
+const colsPersonas = db.prepare("PRAGMA table_info(personas)").all().map((c) => c.name);
+if (!colsPersonas.includes("consentimiento_en")) db.exec("ALTER TABLE personas ADD COLUMN consentimiento_en TEXT");
+if (!colsPersonas.includes("consentimiento_version")) db.exec("ALTER TABLE personas ADD COLUMN consentimiento_version TEXT");
+
+// Registro de acciones sensibles del administrador (quien hizo que y cuando)
+db.exec(`
+  CREATE TABLE IF NOT EXISTS auditoria (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    creado_en TEXT DEFAULT (datetime('now','localtime')),
+    actor TEXT NOT NULL,
+    accion TEXT NOT NULL,
+    detalle TEXT,
+    ip TEXT
+  );
+`);
+
 // Configuracion del modulo de nomina que el admin cambia desde el panel
 db.exec(`CREATE TABLE IF NOT EXISTS nomina_config (clave TEXT PRIMARY KEY, valor TEXT NOT NULL);`);
 
@@ -56,10 +73,16 @@ const PREFIJO = process.env.PREFIJO_CODIGO || "AMIGOS";
 const ANCHO = parseInt(process.env.ANCHO_CODIGO || "2", 10);
 
 // Genera el siguiente codigo secuencial: AMIGOS01, AMIGOS02, ... (solo cuenta lideres)
+// Usa el MAYOR numero que ya exista (contar filas podia repetir un codigo si se borraba un lider).
 function siguienteCodigo() {
-  const fila = db.prepare("SELECT COUNT(*) AS total FROM personas WHERE rol = 'lider'").get();
-  const numero = fila.total + 1;
-  return PREFIJO + String(numero).padStart(ANCHO, "0");
+  const filas = db.prepare("SELECT codigo FROM personas WHERE codigo IS NOT NULL").all();
+  let mayor = 0;
+  for (const f of filas) {
+    if (!f.codigo.startsWith(PREFIJO)) continue;
+    const n = parseInt(f.codigo.slice(PREFIJO.length), 10);
+    if (Number.isFinite(n) && n > mayor) mayor = n;
+  }
+  return PREFIJO + String(mayor + 1).padStart(ANCHO, "0");
 }
 
 module.exports = { db, siguienteCodigo };

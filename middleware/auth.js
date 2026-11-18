@@ -12,4 +12,11 @@ function requiereAdmin(req, res, next) {
   next();
 }
 
-module.exports = { requiereLider, requiereAdmin };
+function requiereLiderOAdmin(req, res, next) {
+  if (!req.session || !(req.session.esAdmin || req.session.codigoLider)) {
+    return res.status(401).json({ error: "Debes iniciar sesion." });
+  }
+  next();
+}
+
+module.exports = { requiereLider, requiereAdmin, requiereLiderOAdmin };

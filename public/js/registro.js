@@ -19,24 +19,7 @@ cedulaInput.addEventListener("input", (e) => {
   cedulaDuplicada = false;
 });
 
-cedulaInput.addEventListener("blur", async () => {
-  const valor = cedulaInput.value.trim();
-  if (valor.length < 5) return;
-  try {
-    const resp = await fetch(`/api/verificar-cedula/${encodeURIComponent(valor)}`);
-    const data = await resp.json();
-    if (data.existe) {
-      avisoCedula.textContent = "Esta cédula ya está registrada. No puedes continuar con este número.";
-      avisoCedula.classList.remove("oculto");
-      cedulaDuplicada = true;
-    } else {
-      avisoCedula.classList.add("oculto");
-      cedulaDuplicada = false;
-    }
-  } catch (err) {
-    // si falla la verificacion, no bloqueamos: el servidor igual la valida al enviar
-  }
-});
+// La cedula repetida se avisa al enviar el formulario (el servidor responde "ya esta registrada").
 
 const radios = document.querySelectorAll('input[name="tipo_zona"]');
 const bloqueUrbana = document.getElementById("bloqueUrbana");
@@ -93,6 +76,7 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
     barrio: tipo_zona === "urbana" ? document.getElementById("barrio").value : null,
     vereda: tipo_zona === "rural" ? document.getElementById("vereda").value : null,
     referido_por: ref || null,
+    consentimiento: document.getElementById("consentimiento").checked,
   };
 
   try {
@@ -102,6 +86,15 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
       body: JSON.stringify(cuerpo),
     });
     const data = await resp.json();
+    if (resp.status === 409) {
+      // Cedula repetida: el aviso sale junto al campo, claro y sin parecer un error del sistema
+      avisoCedula.textContent = "Esta cédula ya está registrada. No puedes registrarte dos veces con el mismo número.";
+      avisoCedula.classList.remove("oculto");
+      cedulaDuplicada = true;
+      errorEl.classList.add("oculto");
+      cedulaInput.focus();
+      return;
+    }
     if (!resp.ok) {
       errorEl.textContent = data.error || "Ocurrió un error.";
       errorEl.classList.remove("oculto");

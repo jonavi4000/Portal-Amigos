@@ -1,3 +1,8 @@
+// Escapa texto antes de meterlo en HTML (evita que un dato raro se ejecute como codigo)
+function esc(t) {
+  return String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
 const vistaLogin = document.getElementById("vistaLogin");
 const vistaPanel = document.getElementById("vistaPanel");
 
@@ -63,15 +68,15 @@ function renderArbol(nodos, contenedorUl) {
         : nodo.vereda;
     li.innerHTML = `
       <div class="nodo-tarjeta">
-        <div class="avatar ${nodo.rol === "persona" ? "persona" : ""}">${iniciales(nodo.nombre)}</div>
+        <div class="avatar ${nodo.rol === "persona" ? "persona" : ""}">${esc(iniciales(nodo.nombre))}</div>
         <div class="nodo-info">
           <div class="nodo-cabecera">
-            <span class="nodo-nombre">${nodo.nombre}</span>
-            ${nodo.codigo ? `<span class="nodo-codigo">${nodo.codigo}</span>` : `<span class="nodo-codigo persona-tag">persona</span>`}
+            <span class="nodo-nombre">${esc(nodo.nombre)}</span>
+            ${nodo.codigo ? `<span class="nodo-codigo">${esc(nodo.codigo)}</span>` : `<span class="nodo-codigo persona-tag">persona</span>`}
           </div>
           <div class="nodo-detalle">
-            Tel. ${nodo.telefono} · C.C. ${nodo.cedula} · ${nodo.rango_edad} ·
-            <span class="badge-zona">${zona}</span>
+            Tel. ${esc(nodo.telefono)} · C.C. ${esc(nodo.cedula)} · ${esc(nodo.rango_edad)} ·
+            <span class="badge-zona">${esc(zona)}</span>
           </div>
         </div>
       </div>
@@ -286,16 +291,16 @@ function renderTabla() {
       const zonaTexto = p.tipo_zona === "urbana" ? "Urbana" : "Rural";
       const lugar = p.tipo_zona === "urbana" ? p.barrio || "" : p.vereda || "";
       return `<tr>
-        <td>${p.nombre}</td>
-        <td>${p.cedula}</td>
-        <td>${p.telefono}</td>
-        <td>${p.rango_edad}</td>
+        <td>${esc(p.nombre)}</td>
+        <td>${esc(p.cedula)}</td>
+        <td>${esc(p.telefono)}</td>
+        <td>${esc(p.rango_edad)}</td>
         <td>${p.rol === "lider" ? "Líder" : "Persona"}</td>
-        <td>${p.codigo || "—"}</td>
+        <td>${esc(p.codigo || "—")}</td>
         <td>${zonaTexto}</td>
-        <td>${p.tipo_zona === "urbana" ? p.comuna : "—"}</td>
-        <td>${lugar}</td>
-        <td>${p.referido_por || "—"}</td>
+        <td>${esc(p.tipo_zona === "urbana" ? p.comuna : "—")}</td>
+        <td>${esc(lugar)}</td>
+        <td>${esc(p.referido_por || "—")}</td>
       </tr>`;
     })
     .join("");
@@ -391,9 +396,9 @@ document.getElementById("botonExportarFiltrado").addEventListener("click", () =>
 function mostrarCredenciales(el, titulo, codigo, pin) {
   el.className = "tarjeta-exito";
   el.innerHTML =
-    `<p style="margin:0 0 6px;"><strong>${titulo}</strong></p>` +
-    `<p style="margin:0;">Código: <span class="codigo">${codigo}</span></p>` +
-    `<p style="margin:6px 0 0;">PIN: <span class="pin">${pin}</span></p>` +
+    `<p style="margin:0 0 6px;"><strong>${esc(titulo)}</strong></p>` +
+    `<p style="margin:0;">Código: <span class="codigo">${esc(codigo)}</span></p>` +
+    `<p style="margin:6px 0 0;">PIN: <span class="pin">${esc(pin)}</span></p>` +
     `<p class="subtitulo" style="margin:10px 0 0;">Entrégaselo ya, el PIN no vuelve a aparecer. Entra en /lider.html con su cédula y este PIN.</p>`;
   el.scrollIntoView({ behavior: "smooth", block: "center" });
 }
@@ -428,15 +433,29 @@ async function renderMapa(plano) {
   const lugares = [];
   cat.barrios.forEach((b) => lugares.push({ ...b, zona: "Comuna " + b.comuna, rural: false, total: 0, lideres: 0, personas: 0 }));
   cat.rurales.forEach((r) => lugares.push({ ...r, zona: "Rural", rural: true, total: 0, lideres: 0, personas: 0 }));
-  const porNombre = {};
-  lugares.forEach((l) => (porNombre[normalizarTexto(l.nombre)] = l));
+  // Clave: nombre + comuna (hay barrios con el mismo nombre en comunas distintas)
+  const claveLugar = (nombre, zona) => normalizarTexto(nombre) + "|" + zona;
+  const porClave = {};
+  const veces = {};
+  lugares.forEach((l) => {
+    porClave[claveLugar(l.nombre, l.rural ? "rural" : l.comuna)] = l;
+    const n = normalizarTexto(l.nombre);
+    veces[n] = (veces[n] || 0) + 1;
+  });
+  // Respaldo para registros viejos: si el nombre es unico en toda la lista, no importa la comuna guardada
+  const unicoPorNombre = {};
+  lugares.forEach((l) => {
+    if (veces[normalizarTexto(l.nombre)] === 1) unicoPorNombre[normalizarTexto(l.nombre)] = l;
+  });
 
   let sinUbicar = 0;
   const porComuna = { Occidental: 0, Norte: 0, Oriental: 0, Sur: 0 };
   let totalRural = 0;
   plano.forEach((p) => {
-    const clave = normalizarTexto(p.tipo_zona === "urbana" ? p.barrio : p.vereda);
-    const lugar = porNombre[clave];
+    const nombreLugar = p.tipo_zona === "urbana" ? p.barrio : p.vereda;
+    const lugar =
+      porClave[claveLugar(nombreLugar, p.tipo_zona === "urbana" ? p.comuna : "rural")] ||
+      unicoPorNombre[normalizarTexto(nombreLugar)];
     if (lugar) {
       lugar.total++;
       if (p.rol === "lider") lugar.lideres++;
@@ -492,7 +511,7 @@ async function renderMapa(plano) {
   const ranking = lugares.filter((l) => l.total > 0).sort((a, b) => b.total - a.total).slice(0, 15);
   document.getElementById("cuerpoRanking").innerHTML = ranking.length
     ? ranking
-        .map((l, i) => `<tr><td>${i + 1}</td><td>${l.nombre}</td><td>${l.zona}</td><td><strong>${l.total}</strong></td><td>${l.lideres}</td><td>${l.personas}</td></tr>`)
+        .map((l, i) => `<tr><td>${i + 1}</td><td>${esc(l.nombre)}</td><td>${esc(l.zona)}</td><td><strong>${l.total}</strong></td><td>${l.lideres}</td><td>${l.personas}</td></tr>`)
         .join("")
     : '<tr><td colspan="6">Todavía no hay personas ubicadas en barrios de la lista.</td></tr>';
 }

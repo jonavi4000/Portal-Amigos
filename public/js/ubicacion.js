@@ -31,7 +31,11 @@
     catalogo.barrios
       .filter((b) => b.comuna === comuna)
       .sort((a, b) => a.nombre.localeCompare(b.nombre, "es"))
-      .forEach((b) => grupo.appendChild(opcion(b.nombre, b.nombre)));
+      .forEach((b) => {
+        const o = opcion(b.nombre, b.nombre);
+        o.dataset.comuna = b.comuna; // asi, si el nombre se repite en otra comuna, no se confunde
+        grupo.appendChild(o);
+      });
     selBarrio.appendChild(grupo);
   });
   selBarrio.appendChild(opcion("Sin registro", "Mi barrio no está en la lista"));
@@ -52,8 +56,8 @@
       return;
     }
     if (bloqueComuna) bloqueComuna.classList.add("oculto");
-    const b = catalogo.barrios.find((x) => x.nombre === selBarrio.value);
-    if (b && selComuna) selComuna.value = b.comuna;
+    const elegida = selBarrio.selectedOptions && selBarrio.selectedOptions[0];
+    if (elegida && elegida.dataset.comuna && selComuna) selComuna.value = elegida.dataset.comuna;
   }
   selBarrio.addEventListener("change", actualizarComuna);
 
